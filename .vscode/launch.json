@@ -1,0 +1,30 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: japanify2",
+      "type": "python",
+      "request": "launch",
+      "program": "./japanify.py",
+      "args": [
+        "input.png"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python: steal",
+      "type": "python",
+      "request": "launch",
+      "program": "./steal_colors_with_same_brightness.py",
+      "args": [
+        "--palette-img",
+        "pallete-img.png",
+        "japanified_input.png"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}

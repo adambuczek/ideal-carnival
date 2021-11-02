@@ -1,12 +1,11 @@
-#!/usr/bin/python3
-
 # Original code by vvdr12: https://gist.github.com/vvdr12/6327611
 # USAGE: ./japanify.py TDZSJMs.jpg
 # REQUIRE: Pillow + optionally tqdm
 
 import argparse
 from PIL import Image
-from os.path import basename, dirname, join
+from os import path
+
 try:
     from tqdm import tqdm
 except ImportError:  # optional dependency, simply print a X/Y ratio on each step else
@@ -17,8 +16,8 @@ except ImportError:  # optional dependency, simply print a X/Y ratio on each ste
 
 def main():
     args = parse_args()
-    destination_image = join(dirname(args.source_image),
-                             'japanified_' + basename(args.source_image))
+    destination_image = path.join(path.dirname(args.source_image),
+                             'japanified_' + path.basename(args.source_image))
 
     img = Image.open(args.source_image)
     print('Format:', img.format)
