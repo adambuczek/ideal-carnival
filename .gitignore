@@ -130,3 +130,9 @@ dmypy.json
 
 # Exclude local vscode settings
 .vscode/settings.json
+
+# Exclude all images, provide only code
+*.png
+*.jpg
+*.jpeg
+*.gif
